@@ -1,0 +1,13 @@
+keywhiz:
+  build: .
+  ports:
+   - "4444:4444"
+  links:
+   - mysql
+mysql:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: my-secret-pw
+    MYSQL_DATABASE: keywhizdb_development
+    MYSQL_USER: keywhizdb
+    MYSQL_PASSWORD: my-keywhizdb-pw

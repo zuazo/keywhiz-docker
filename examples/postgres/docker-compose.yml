@@ -1,0 +1,11 @@
+keywhiz:
+  build: .
+  ports:
+   - "4444:4444"
+  links:
+   - postgres
+postgres:
+  image: postgres
+  environment:
+    POSTGRES_USER: keywhizdb
+    POSTGRES_PASSWORD: my-keywhizdb-pw
