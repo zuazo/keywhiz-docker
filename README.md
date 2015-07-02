@@ -18,7 +18,7 @@ From [its own website](http://square.github.io/keywhiz/):
 >
 > *Keywhiz should be considered alpha at this point. Upcoming changes may break API backward compatibility. See our [roadmap](http://square.github.io/keywhiz/#roadmap).*
 
-## How to use this image
+## How to Use This Image
 
 ### Download the Image
 

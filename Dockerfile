@@ -1,4 +1,5 @@
 FROM maven:3.3-jdk-8
+MAINTAINER Xabier de Zuazo "xabier@zuazo.org"
 
 ENV KEYWHIZ_VERSION=0.7.6 \
     KEYWHIZ_PREFIX=/opt \
