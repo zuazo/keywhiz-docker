@@ -6,10 +6,11 @@ ENV KEYWHIZ_VERSION=0.7.6 \
     JAR="server/target/keywhiz-server-shaded.jar"
 ENV ENTRYPOINT="java -jar $JAR"
 
-RUN wget -O- https://github.com/square/keywhiz/archive/v$KEYWHIZ_VERSION.tar.gz\
+RUN wget -nv -O- \
+    https://github.com/square/keywhiz/archive/v$KEYWHIZ_VERSION.tar.gz \
     | tar -xz -C $KEYWHIZ_PREFIX
 WORKDIR $KEYWHIZ_PREFIX/keywhiz-$KEYWHIZ_VERSION
-RUN mvn package -am -pl server -P h2 && \
+RUN mvn package -q -am -pl server -P h2 && \
     ln server/target/keywhiz-server-$KEYWHIZ_VERSION-shaded.jar \
       server/target/keywhiz-server-shaded.jar
 
@@ -17,6 +18,9 @@ RUN mvn package -am -pl server -P h2 && \
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends --no-upgrade \
+# Install netstat for integration tests:
+      net-tools \
+# Install an application to generate a random root password:
       pwgen && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 

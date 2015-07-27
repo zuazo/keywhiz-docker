@@ -1,5 +1,7 @@
 # Keywhiz Docker Container
-[![Docker Repository on Quay.io](https://quay.io/repository/zuazo/keywhiz/status "Docker Repository on Quay.io")](https://quay.io/repository/zuazo/keywhiz)
+[![Source Code](https://img.shields.io/badge/source-GitHub-blue.svg?style=flat)](https://github.com/zuazo/keywhiz-docker)&nbsp;
+[![Docker Repository on Quay.io](https://quay.io/repository/zuazo/keywhiz/status "Docker Repository on Quay.io")](https://quay.io/repository/zuazo/keywhiz)&nbsp;
+[![Build Status](http://img.shields.io/travis/zuazo/keywhiz-docker.svg?style=flat)](https://travis-ci.org/zuazo/keywhiz-docker)
 
 A [Docker](https://www.docker.com/) image with [Keywhiz](http://square.github.io/keywhiz/).
 
@@ -11,12 +13,12 @@ A [Docker](https://www.docker.com/) image with [Keywhiz](http://square.github.io
 
 From [its own website](http://square.github.io/keywhiz/):
 
-> Keywhiz is a system for managing and distributing secrets. It can fit well with a service oriented architecture (SOA).
-> [...]
->
-> Keywhiz makes managing secrets easier and more secure. Keywhiz servers in a cluster centrally store secrets encrypted in a database. Clients use mutually authenticated TLS (mTLS) to retrieve secrets they have access to. Authenticated users administer Keywhiz via CLI or web app UI. To enable workflows, Keywhiz has automation APIs over mTLS and support for simple secret generation plugins.
->
-> *Keywhiz should be considered alpha at this point. Upcoming changes may break API backward compatibility. See our [roadmap](http://square.github.io/keywhiz/#roadmap).*
+*Keywhiz is a system for managing and distributing secrets. It can fit well with a service oriented architecture (SOA).*
+*[...]*
+
+*Keywhiz makes managing secrets easier and more secure. Keywhiz servers in a cluster centrally store secrets encrypted in a database. Clients use mutually authenticated TLS (mTLS) to retrieve secrets they have access to. Authenticated users administer Keywhiz via CLI or web app UI. To enable workflows, Keywhiz has automation APIs over mTLS and support for simple secret generation plugins.*
+
+*Keywhiz should be considered alpha at this point. Upcoming changes may break API backward compatibility. See our [roadmap](http://square.github.io/keywhiz/#roadmap).*
 
 ## How to Use This Image
 
