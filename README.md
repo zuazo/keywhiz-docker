@@ -82,9 +82,11 @@ The docker working directory is set to the main Keywhiz directory (`/opt/keywhiz
 
 # License and Author
 
-* **Author:** [Xabier de Zuazo](https://github.com/zuazo) (<xabier@zuazo.org>)
-* **License:** Apache License, Version 2.0
-* **Copyright:** Copyright (c) 2015, Xabier de Zuazo
+|                      |                                          |
+|:---------------------|:-----------------------------------------|
+| **Author:**          | [Xabier de Zuazo](https://github.com/zuazo) (xabier@zuazo.org)
+| **Copyright:**       | Copyright (c) 2015
+| **License:**         | Apache License, Version 2.0
 
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
