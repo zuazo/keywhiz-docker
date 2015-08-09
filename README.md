@@ -1,7 +1,5 @@
 # Keywhiz Docker Container
-[![Source Code](https://img.shields.io/badge/source-GitHub-blue.svg?style=flat)](https://github.com/zuazo/keywhiz-docker)&nbsp;
-[![Docker Repository on Quay.io](https://quay.io/repository/zuazo/keywhiz/status "Docker Repository on Quay.io")](https://quay.io/repository/zuazo/keywhiz)&nbsp;
-[![Build Status](http://img.shields.io/travis/zuazo/keywhiz-docker.svg?style=flat)](https://travis-ci.org/zuazo/keywhiz-docker)
+[![Source Code](https://img.shields.io/badge/source-GitHub-blue.svg?style=flat)](https://github.com/zuazo/keywhiz-docker) [![Docker Repository on Quay.io](https://quay.io/repository/zuazo/keywhiz/status "Docker Repository on Quay.io")](https://quay.io/repository/zuazo/keywhiz) [![Build Status](http://img.shields.io/travis/zuazo/keywhiz-docker.svg?style=flat)](https://travis-ci.org/zuazo/keywhiz-docker)
 
 A [Docker](https://www.docker.com/) image with [Keywhiz](http://square.github.io/keywhiz/).
 
