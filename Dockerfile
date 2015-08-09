@@ -20,7 +20,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends --no-upgrade \
 # Install netstat for integration tests:
       net-tools \
-# Install an application to generate a random passwords:
+# Install an application to generate random passwords:
       pwgen && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
