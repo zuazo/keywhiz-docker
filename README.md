@@ -5,7 +5,8 @@ A [Docker](https://www.docker.com/) image with [Keywhiz](http://square.github.io
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-* `0.7.6`, `latest` (`0.7.6`) ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/tree/master/Dockerfile))
+* `0.7.7`, `0.7`, `latest` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/tree/master/Dockerfile))
+* `0.7.6` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/blob/729125127cc4d59a3b52e519f805bf3c5a944511/Dockerfile))
 
 ## What Is Keywhiz?
 

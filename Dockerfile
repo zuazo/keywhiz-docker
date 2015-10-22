@@ -1,7 +1,7 @@
 FROM maven:3.3-jdk-8
 MAINTAINER Xabier de Zuazo "xabier@zuazo.org"
 
-ENV KEYWHIZ_VERSION=0.7.6 \
+ENV KEYWHIZ_VERSION=0.7.7 \
     KEYWHIZ_PREFIX=/opt \
     JAR="server/target/keywhiz-server-shaded.jar"
 ENV ENTRYPOINT="java -jar $JAR"
