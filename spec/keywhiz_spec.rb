@@ -26,7 +26,7 @@ describe docker_build('.', tag: 'keywhiz') do
 
     describe port(4444) do
       it do
-        sleep(10)
+        sleep(ENV.key?('CI') ? 60 : 10)
         should be_listening
       end
     end
