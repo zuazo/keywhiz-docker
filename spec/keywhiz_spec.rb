@@ -19,12 +19,12 @@ describe docker_build('.', tag: 'keywhiz') do
     describe process('java') do
       it { should be_running }
       its(:user) { should eq 'keywhiz' }
-      its(:args) { should match /keywhiz-server-shaded\.jar/ }
+      its(:args) { should match(/keywhiz-server-shaded\.jar/) }
     end
 
-    describe port(4444) do
+    describe port(4444), if: !ENV.key?('CIRCLECI') do
       it do
-        sleep(ENV.key?('CI') ? 120 : 10)
+        sleep(10)
         should be_listening
       end
     end
