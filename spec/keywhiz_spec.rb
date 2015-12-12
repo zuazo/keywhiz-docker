@@ -26,7 +26,7 @@ describe docker_build('.', tag: 'keywhiz') do
       # Check if TCP port 4444 is listening
       describe command('nc -z 127.0.0.1 4444') do
         its(:exit_status) do
-          sleep(10)
+          sleep(ENV.key?('CIRCLECI') ? 60 : 10)
           should eq 0
         end
       end
