@@ -18,9 +18,6 @@ RUN mvn package -q -am -pl server -P h2 && \
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends --no-upgrade \
-# Install netstat for integration tests:
-      net-tools \
-# Install an application to generate random passwords:
       pwgen && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
