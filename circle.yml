@@ -1,0 +1,9 @@
+machine:
+  services:
+  - docker
+  ruby:
+    version: 2.2.3
+
+test:
+  override:
+  - bundle exec rspec
