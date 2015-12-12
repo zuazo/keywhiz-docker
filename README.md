@@ -1,16 +1,16 @@
-## Keywhiz Docker Container
+### Keywhiz Docker Container
 
 [![GitHub](http://img.shields.io/badge/github-zuazo/keywhiz--docker-blue.svg?style=flat)](https://github.com/zuazo/keywhiz-docker) [![Docker Repository on Quay.io](https://quay.io/repository/zuazo/keywhiz/status "Docker Repository on Quay.io")](https://quay.io/repository/zuazo/keywhiz) [![Circle CI](https://circleci.com/gh/zuazo/keywhiz-docker/tree/master.svg?style=shield)](https://circleci.com/gh/zuazo/keywhiz-docker/tree/master)
 
 A [Docker](https://www.docker.com/) image with [Keywhiz](http://square.github.io/keywhiz/).
 
-### Supported Tags and Respective `Dockerfile` Links
+#### Supported Tags and Respective `Dockerfile` Links
 
 * `0.7.10`, `0.7`, `latest` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/tree/master/Dockerfile))
 * `0.7.7` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/blob/0.7.7/Dockerfile))
 * `0.7.6` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/blob/0.7.6/Dockerfile))
 
-### What Is Keywhiz?
+#### What Is Keywhiz?
 
 From [its own website](http://square.github.io/keywhiz/):
 
@@ -21,13 +21,13 @@ From [its own website](http://square.github.io/keywhiz/):
 
 *Keywhiz should be considered alpha at this point. Upcoming changes may break API backward compatibility. See our [roadmap](http://square.github.io/keywhiz/#roadmap).*
 
-### How to Use This Image
+#### How to Use This Image
 
-#### Download the Image
+##### Download the Image
 
     $ docker pull zuazo/keywhiz
 
-#### Run a Keywhiz Server With Development Data
+##### Run a Keywhiz Server With Development Data
 
     $ docker run -d -p 4444:4444 zuazo/keywhiz
 
@@ -35,7 +35,7 @@ You can now open [https://127.0.0.1:4444/](https://127.0.0.1:4444/) to navigate 
 
 See the [*examples/*](https://github.com/zuazo/keywhiz-docker/tree/master/examples) directory for more examples.
 
-#### Configuration
+##### Configuration
 
 This image starts Keywhiz with the development data by default. All the `CMD` calls will have the Keywhiz JAR file as entrypoint (`java -jar [...]/keywhiz-server-shaded.jar`).
 
@@ -54,7 +54,7 @@ You can use them directly from your YAML configuration file or generate your own
 
 See how to generate all this data in the [Keywhiz development key material generation documentation](https://github.com/square/keywhiz/wiki/Development-and-test-key-material).
 
-### Build from Sources
+#### Build from Sources
 
 Instead of installing the image from Docker Hub, you can build the image from sources if you prefer:
 
@@ -62,11 +62,11 @@ Instead of installing the image from Docker Hub, you can build the image from so
     $ cd keywhiz
     $ docker build -t zuazo/keywhiz .
 
-### Exposed TCP/IP Ports
+#### Exposed TCP/IP Ports
 
 * `4444`: Keywhiz application HTTPS port.
 
-### Environment Variables Used at Runtime by the Entrypoint Script
+#### Environment Variables Used at Runtime by the Entrypoint Script
 
 * `COOKIEKEY_PATH`: Randomly generated cookie key path (`server/target/classes/cookiekey.base64`).
 * `KEYSTORE_PASS`: Password used to generate the derivation key (randomly generated).
@@ -74,7 +74,7 @@ Instead of installing the image from Docker Hub, you can build the image from so
 
 You can change them using `docker run -e [...]` or in your *Dockerfile*, using the `ENV` instruction.
 
-### Read-only Environment Variables Used at Build Time
+#### Read-only Environment Variables Used at Build Time
 
 * `KEYWHIZ_VERSION`: Keywhiz version to install (`0.7.6`).
 * `KEYWHIZ_PREFIX`: Keywhiz parent directory (`/opt`).
@@ -83,7 +83,7 @@ You can change them using `docker run -e [...]` or in your *Dockerfile*, using t
 
 The docker working directory is set to the main Keywhiz directory (`/opt/keywhiz-VERSION`).
 
-## License and Author
+### License and Author
 
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
