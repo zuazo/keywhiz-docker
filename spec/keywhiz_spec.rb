@@ -8,8 +8,6 @@ describe docker_build('.', tag: 'keywhiz') do
   it { should have_env 'KEYWHIZ_VERSION' }
 
   describe docker_run('keywhiz') do
-    before(:all) { sleep(120) if ENV.key?('CI') }
-
     describe user('keywhiz') do
       it { should exist }
     end
@@ -26,7 +24,7 @@ describe docker_build('.', tag: 'keywhiz') do
 
     describe port(4444) do
       it do
-        sleep(ENV.key?('CI') ? 60 : 10)
+        sleep(ENV.key?('CI') ? 120 : 10)
         should be_listening
       end
     end
