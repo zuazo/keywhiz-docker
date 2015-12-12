@@ -1,11 +1,13 @@
 # Keywhiz Docker Container
-[![Source Code](https://img.shields.io/badge/source-GitHub-blue.svg?style=flat)](https://github.com/zuazo/keywhiz-docker) [![Docker Repository on Quay.io](https://quay.io/repository/zuazo/keywhiz/status "Docker Repository on Quay.io")](https://quay.io/repository/zuazo/keywhiz) [![Build Status](http://img.shields.io/travis/zuazo/keywhiz-docker.svg?style=flat)](https://travis-ci.org/zuazo/keywhiz-docker)
+
+[![GitHub](http://img.shields.io/badge/github-zuazo/keywhiz--docker-blue.svg?style=flat)](https://github.com/zuazo/keywhiz-docker) [![Docker Repository on Quay.io](https://quay.io/repository/zuazo/keywhiz/status "Docker Repository on Quay.io")](https://quay.io/repository/zuazo/keywhiz) [![Build Status](http://img.shields.io/travis/zuazo/keywhiz-docker.svg?style=flat)](https://travis-ci.org/zuazo/keywhiz-docker)
 
 A [Docker](https://www.docker.com/) image with [Keywhiz](http://square.github.io/keywhiz/).
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-* `0.7.7`, `0.7`, `latest` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/tree/master/Dockerfile))
+* `0.7.10`, `0.7`, `latest` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/tree/master/Dockerfile))
+* `0.7.7` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/blob/0.7.7/Dockerfile))
 * `0.7.6` ([*/Dockerfile*](https://github.com/zuazo/keywhiz-docker/blob/0.7.6/Dockerfile))
 
 ## What Is Keywhiz?
