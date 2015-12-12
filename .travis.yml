@@ -1,11 +1,7 @@
 language: ruby
 
-sudo: true
+sudo: required
 
-before_script:
-- source <(curl -sL https://raw.githubusercontent.com/zuazo/docker-in-travis/master/scripts/start_docker.sh)
+services: docker
 
-script:
-- bundle exec rspec
-
-after_failure: cat docker_daemon.log
+script: travis_retry bundle exec rspec
