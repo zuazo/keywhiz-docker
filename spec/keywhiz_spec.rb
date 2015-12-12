@@ -23,21 +23,13 @@ describe docker_build('.', tag: 'keywhiz') do
         its(:args) { should match(/keywhiz-server-shaded\.jar/) }
       end
 
-      # Check if TCP port 4444 is listening
-      describe command('nc -z 127.0.0.1 4444') do
-        its(:exit_status) do
-          sleep(ENV.key?('CIRCLECI') ? 60 : 10)
-          should eq 0
+      # Does not work on CircleCI
+      describe port(4444), if: !ENV.key?('CIRCLECI') do
+        it do
+          sleep(10)
+          should be_listening
         end
       end
-
-      # Does not work on CircleCI
-      # describe port(4444), if: !ENV.key?('CIRCLECI') do
-      #   it do
-      #     sleep(10)
-      #     should be_listening
-      #   end
-      # end
     end
   end
 end
