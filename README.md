@@ -47,7 +47,7 @@ If you don't want to use development data, you should generate at least the foll
 
 The following image generates the following data in the entrypoint script:
 
-* A base derivation key using `gen-aes` in *derivation.jceks* (*temporary disabled*).
+* A base derivation key using `gen-aes` in *derivation.jceks*.
 * Random cookie key in *server/target/classes/cookiekey.base64*.
 
 You can use them directly from your YAML configuration file or generate your own.
