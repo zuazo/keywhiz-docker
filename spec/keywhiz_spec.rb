@@ -26,11 +26,14 @@ describe docker_build('.', tag: 'keywhiz') do
         its(:args) { should match(/keywhiz-server-shaded\.jar/) }
       end
 
-      describe port(4444), if: !ENV.key?('CIRCLECI') do
+      # Disable the following tests on CircleCI
+      next if ENV.key?('CIRCLECI')
+
+      describe port(4444) do
         it { should be_listening }
       end
 
-      describe port(8085), if: !ENV.key?('CIRCLECI') do
+      describe port(8085) do
         it { should be_listening }
       end
 
