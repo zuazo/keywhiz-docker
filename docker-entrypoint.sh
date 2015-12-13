@@ -13,13 +13,11 @@ KEYSTORE_PASS="${KEYSTORE_PASS:-$(pwgen -s 12 1)}"
 KW_POPULATE_DEV_DATA="${KW_POPULATE_DEV_DATA:-true}"
 
 # Generate base derivation key in derivation.jceks
-# FIXME: Does not work properly (a possible bug?)
-# javax.crypto.AEADBadTagException: mac check in GCM failed
-# echo 'Generating derivation key in derivation.jceks.'
-# rm server/target/classes/derivation.jceks
-# $ENTRYPOINT gen-aes --storepass "${KEYSTORE_PASS}"
-# sed -i "s/password: CHANGE$/password: ${KEYSTORE_PASS}/" "${DEV_KW_CONFIG}"*
-# echo 'Derivation key generated.'
+echo 'Generating derivation key in derivation.jceks.'
+rm server/target/classes/derivation.jceks
+$ENTRYPOINT gen-aes --storepass "${KEYSTORE_PASS}"
+sed -i "s/password: CHANGE$/password: ${KEYSTORE_PASS}/" "${DEV_KW_CONFIG}"*
+echo 'Derivation key generated.'
 
 # Generata key used to encrypt cookie content in cookiekey.base64
 if ! [ -e "${COOKIEKEY_PATH}" ]
